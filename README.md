@@ -1,73 +1,81 @@
-# Welcome to your Lovable project
+# Jayanth Lankalapalli — Portfolio Website
 
-## Project info
+A personal portfolio/resume website built with React, Vite, TypeScript, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/7410f81b-8218-4f2d-bb32-1ba1f84eabb2
+## 🚀 Local Development
 
-## How can I edit this code?
+### Prerequisites
 
-There are several ways of editing your application.
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- npm (comes with Node.js)
 
-**Use Lovable**
+### Setup
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7410f81b-8218-4f2d-bb32-1ba1f84eabb2) and start prompting.
+```bash
+# 1. Clone the repository
+git clone https://github.com/lankalapalljn/portfolio.git
+cd portfolio
 
-Changes made via Lovable will be committed automatically to this repo.
+# 2. Install dependencies
+npm install
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 3. Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The app will be available at `http://localhost:8080`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Build for production
 
-**Use GitHub Codespaces**
+```bash
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The output will be in the `dist/` folder.
 
-## What technologies are used for this project?
+### Preview production build locally
 
-This project is built with:
+```bash
+npm run preview
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## 🌐 Publishing to GitHub Pages
 
-Simply open [Lovable](https://lovable.dev/projects/7410f81b-8218-4f2d-bb32-1ba1f84eabb2) and click on Share -> Publish.
+This project includes a GitHub Actions workflow that automatically deploys to GitHub Pages on every push to `main`.
 
-## Can I connect a custom domain to my Lovable project?
+### First-time setup
 
-Yes, you can!
+1. **Push your code to GitHub** (to a repo like `lankalapalljn/portfolio` or `lankalapalljn.github.io` for a user site).
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+2. **Enable GitHub Pages** in your repository:
+   - Go to **Settings → Pages**
+   - Under **Source**, select **GitHub Actions**
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+3. **Set the base path** (only if your repo is NOT `<username>.github.io`):
+   - Open `vite.config.ts` and set the `base` option to your repo name:
+     ```ts
+     base: "/portfolio/",
+     ```
+   - If your repo is `<username>.github.io`, leave `base` as `"/"` (default).
+
+4. **Push to `main`** — the GitHub Action will build and deploy automatically.
+
+5. Your site will be live at:
+   - `https://<username>.github.io/<repo-name>/` (project site)
+   - `https://<username>.github.io/` (user site)
+
+### Manual deploy
+
+You can also trigger a deploy manually from the **Actions** tab → **Deploy to GitHub Pages** → **Run workflow**.
+
+---
+
+## 🛠 Tech Stack
+
+- [React](https://react.dev/) — UI framework
+- [Vite](https://vitejs.dev/) — Build tool
+- [TypeScript](https://www.typescriptlang.org/) — Type safety
+- [Tailwind CSS](https://tailwindcss.com/) — Utility-first CSS
+- [shadcn/ui](https://ui.shadcn.com/) — Component library
