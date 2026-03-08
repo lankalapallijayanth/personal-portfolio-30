@@ -1,5 +1,15 @@
 import { resume } from "@/data/resume";
 import { Briefcase } from "lucide-react";
+import cloudInfra from "@/assets/cloud-infra.png";
+import cybersecurity from "@/assets/cybersecurity.png";
+import mobileDev from "@/assets/mobile-dev.png";
+
+const illustrationMap: Record<string, string> = {
+  amex: cloudInfra,
+  "amex-intern": cloudInfra,
+  qsm: cybersecurity,
+  "vcu-research": mobileDev,
+};
 
 const ExperienceSection = () => {
   return (
@@ -15,8 +25,12 @@ const ExperienceSection = () => {
             className={`rounded-[2rem] bg-card p-8 md:p-10 card-hover animate-slide-up stagger-${Math.min(index + 1, 6)}`}
           >
             <div className="flex items-start gap-4 mb-4">
-              <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center flex-shrink-0">
-                <Briefcase className="w-5 h-5" />
+              <div className="w-14 h-14 rounded-2xl bg-muted flex items-center justify-center flex-shrink-0 overflow-hidden p-1">
+                {illustrationMap[exp.id] ? (
+                  <img src={illustrationMap[exp.id]} alt={`${exp.company} illustration`} className="w-full h-full object-contain" />
+                ) : (
+                  <Briefcase className="w-5 h-5" />
+                )}
               </div>
               <div className="flex-1">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
@@ -28,7 +42,7 @@ const ExperienceSection = () => {
                 <p className="text-muted-foreground font-medium">{exp.company}</p>
               </div>
             </div>
-            <ul className="space-y-3 ml-16">
+            <ul className="space-y-3 ml-[4.5rem]">
               {exp.bullets.map((bullet, i) => (
                 <li key={i} className="text-muted-foreground leading-relaxed flex gap-2">
                   <span className="text-accent mt-1.5 flex-shrink-0">•</span>
