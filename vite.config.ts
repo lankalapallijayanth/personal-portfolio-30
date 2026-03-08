@@ -8,6 +8,7 @@ export default defineConfig({
     host: "::",
     port: 8080,
   },
+  base: "/personal-portfolio-30/",
   plugins: [react()],
   resolve: {
     alias: {
