@@ -73,6 +73,7 @@ export const resume = {
       description:
         "Individually developed using Python and Selenium on VSCode. Allows user to enter Instagram credentials so the program can collect a list of all their followers to perform tasks like gaining more followers and auto-liking posts. Data scrapes follower lists and traverses through followers quickly.",
       tech: ["Python", "Selenium", "VSCode"],
+      github: "https://github.com/lankalapalljn/InstaBot",
     },
     {
       id: "halfway",
