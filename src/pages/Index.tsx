@@ -51,10 +51,10 @@ const Index = () => {
             <div>
               <h3 className="font-semibold mb-4">Navigate</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="/" className="hover:text-accent transition-colors">Home</a></li>
-                <li><a href="/#experience" className="hover:text-accent transition-colors">Experience</a></li>
-                <li><a href="/#projects" className="hover:text-accent transition-colors">Projects</a></li>
-                <li><a href="/#skills" className="hover:text-accent transition-colors">Skills</a></li>
+                <li><a href="/personal-portfolio-30/" className="hover:text-accent transition-colors">Home</a></li>
+                <li><a href="/personal-portfolio-30/#experience" className="hover:text-accent transition-colors">Experience</a></li>
+                <li><a href="/personal-portfolio-30/#projects" className="hover:text-accent transition-colors">Projects</a></li>
+                <li><a href="/personal-portfolio-30/#skills" className="hover:text-accent transition-colors">Skills</a></li>
               </ul>
             </div>
             <div>
