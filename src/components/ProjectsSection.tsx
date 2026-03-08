@@ -1,5 +1,11 @@
 import { resume } from "@/data/resume";
-import { Code2 } from "lucide-react";
+import mobileDev from "@/assets/mobile-dev.png";
+import heroIllustration from "@/assets/hero-illustration.png";
+
+const projectImageMap: Record<string, string> = {
+  instabot: heroIllustration,
+  halfway: mobileDev,
+};
 
 const ProjectsSection = () => {
   return (
@@ -12,24 +18,30 @@ const ProjectsSection = () => {
         {resume.projects.map((project, index) => (
           <div
             key={project.id}
-            className={`rounded-[2rem] bg-card p-8 md:p-10 card-hover animate-slide-up stagger-${Math.min(index + 1, 6)}`}
+            className={`rounded-[2rem] bg-card overflow-hidden card-hover animate-slide-up stagger-${Math.min(index + 1, 6)}`}
           >
-            <div className="flex items-start gap-4 mb-4">
-              <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center flex-shrink-0">
-                <Code2 className="w-5 h-5" />
+            {projectImageMap[project.id] && (
+              <div className="h-48 bg-muted flex items-center justify-center overflow-hidden">
+                <img
+                  src={projectImageMap[project.id]}
+                  alt={`${project.title} illustration`}
+                  className="w-full h-full object-contain p-6"
+                />
               </div>
-              <div>
+            )}
+            <div className="p-8 md:p-10">
+              <div className="mb-4">
                 <h3 className="text-xl font-bold">{project.title}</h3>
                 <p className="text-sm text-muted-foreground">{project.subtitle} • {project.year}</p>
               </div>
-            </div>
-            <p className="text-muted-foreground leading-relaxed mb-4">{project.description}</p>
-            <div className="flex flex-wrap gap-2">
-              {project.tech.map((t) => (
-                <span key={t} className="px-3 py-1 rounded-full bg-muted text-xs font-medium">
-                  {t}
-                </span>
-              ))}
+              <p className="text-muted-foreground leading-relaxed mb-4">{project.description}</p>
+              <div className="flex flex-wrap gap-2">
+                {project.tech.map((t) => (
+                  <span key={t} className="px-3 py-1 rounded-full bg-muted text-xs font-medium">
+                    {t}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         ))}

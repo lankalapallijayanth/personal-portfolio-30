@@ -1,18 +1,17 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Download } from "lucide-react";
 import { resume } from "@/data/resume";
+import heroIllustration from "@/assets/hero-illustration.png";
 
 const HeroSection = () => {
   return (
     <section className="relative rounded-[2.5rem] overflow-hidden bg-muted my-12 animate-fade-in">
       <div className="grid md:grid-cols-2 gap-6 md:gap-12 p-6 md:p-12 lg:p-16">
         <div className="relative aspect-[4/3] md:aspect-auto rounded-[2rem] overflow-hidden animate-scale-in bg-card flex items-center justify-center">
-          <div className="text-center p-8">
-            <div className="w-32 h-32 mx-auto rounded-full bg-primary flex items-center justify-center mb-6">
-              <span className="text-primary-foreground font-bold text-5xl font-serif">JL</span>
-            </div>
-            <p className="text-lg text-muted-foreground">{resume.education.degree}</p>
-            <p className="text-sm text-muted-foreground">{resume.education.school} • GPA: {resume.education.gpa}</p>
-          </div>
+          <img
+            src={heroIllustration}
+            alt="Software engineering workspace illustration"
+            className="w-full h-full object-contain p-4"
+          />
         </div>
 
         <div className="flex flex-col justify-center space-y-6 md:space-y-8">
@@ -32,18 +31,26 @@ const HeroSection = () => {
             >
               Get In Touch
             </a>
+            <a
+              href="/Jayanth_Lankalapalli_Resume.pdf"
+              download
+              className="border-2 border-border hover:border-primary hover:bg-muted rounded-full px-8 py-4 md:px-10 md:py-4 text-base font-medium transition-all hover:scale-105 text-center inline-flex items-center gap-2"
+            >
+              <Download className="w-4 h-4" />
+              Resume
+            </a>
+          </div>
 
-            <div className="flex items-center gap-4">
-              <a href={resume.github} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border-2 border-border hover:border-primary hover:bg-muted transition-all flex items-center justify-center hover:scale-110" aria-label="GitHub">
-                <Github className="w-5 h-5" />
-              </a>
-              <a href={resume.linkedin} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border-2 border-border hover:border-primary hover:bg-muted transition-all flex items-center justify-center hover:scale-110" aria-label="LinkedIn">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href={`mailto:${resume.email}`} className="w-12 h-12 rounded-full border-2 border-border hover:border-primary hover:bg-muted transition-all flex items-center justify-center hover:scale-110" aria-label="Email">
-                <Mail className="w-5 h-5" />
-              </a>
-            </div>
+          <div className="flex items-center gap-4 animate-slide-up stagger-3">
+            <a href={resume.github} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border-2 border-border hover:border-primary hover:bg-muted transition-all flex items-center justify-center hover:scale-110" aria-label="GitHub">
+              <Github className="w-5 h-5" />
+            </a>
+            <a href={resume.linkedin} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border-2 border-border hover:border-primary hover:bg-muted transition-all flex items-center justify-center hover:scale-110" aria-label="LinkedIn">
+              <Linkedin className="w-5 h-5" />
+            </a>
+            <a href={`mailto:${resume.email}`} className="w-12 h-12 rounded-full border-2 border-border hover:border-primary hover:bg-muted transition-all flex items-center justify-center hover:scale-110" aria-label="Email">
+              <Mail className="w-5 h-5" />
+            </a>
           </div>
         </div>
       </div>

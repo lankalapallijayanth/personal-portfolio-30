@@ -41,7 +41,7 @@ const Header = () => {
             <div className="w-7 h-7 sm:w-8 sm:h-8 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
               <span className="text-primary-foreground font-bold text-base sm:text-lg">J</span>
             </div>
-            <span className="text-base sm:text-xl font-bold font-serif truncate">Jay Lankalapalli</span>
+            <span className="text-base sm:text-xl font-bold font-serif truncate">Jayanth Lankalapalli</span>
           </a>
 
           <nav className="hidden md:flex items-center gap-2">

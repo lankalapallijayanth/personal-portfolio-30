@@ -1,6 +1,6 @@
 export const resume = {
   name: "Jayanth Lankalapalli",
-  nickname: "Jay",
+  nickname: "Jayanth",
   email: "lankalapallijayanth@gmail.com",
   linkedin: "https://www.linkedin.com/in/jayanthlankalapalli",
   github: "https://github.com/lankalapalljn",
