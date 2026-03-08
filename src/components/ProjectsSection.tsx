@@ -1,3 +1,4 @@
+import { ExternalLink } from "lucide-react";
 import { resume } from "@/data/resume";
 import mobileDev from "@/assets/mobile-dev.png";
 import heroIllustration from "@/assets/hero-illustration.png";
