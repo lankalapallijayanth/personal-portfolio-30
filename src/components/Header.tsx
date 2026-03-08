@@ -25,12 +25,13 @@ const Header = () => {
     }
   };
 
+  const basePath = "/personal-portfolio-30";
   const navLinks = [
-    { label: "Home", href: "/" },
-    { label: "Experience", href: "/#experience" },
-    { label: "Projects", href: "/#projects" },
-    { label: "Skills", href: "/#skills" },
-    { label: "Contact", href: "/contact" },
+    { label: "Home", href: `${basePath}/` },
+    { label: "Experience", href: `${basePath}/#experience` },
+    { label: "Projects", href: `${basePath}/#projects` },
+    { label: "Skills", href: `${basePath}/#skills` },
+    { label: "Contact", href: `${basePath}/contact` },
   ];
 
   return (
