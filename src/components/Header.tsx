@@ -38,7 +38,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 py-2 sm:py-4">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 sm:h-16 pill-nav px-4 sm:px-6">
-          <a href="/" className="flex items-center gap-1.5 sm:gap-2">
+          <a href="/personal-portfolio-30/" className="flex items-center gap-1.5 sm:gap-2">
             <div className="w-7 h-7 sm:w-8 sm:h-8 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
               <span className="text-primary-foreground font-bold text-base sm:text-lg">J</span>
             </div>
