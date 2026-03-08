@@ -83,6 +83,7 @@ export const resume = {
       description:
         "Developed using Android Studio, Java, and Google API. Led team using Agile Software development process. Allows user to locate a midpoint address between two given addresses, generates special location information such as restaurants and parks, and allows the generated address to be shared.",
       tech: ["Android Studio", "Java", "Google API"],
+      github: "https://github.com/lankalapalljn/HalfWayApp",
     },
   ],
 };
