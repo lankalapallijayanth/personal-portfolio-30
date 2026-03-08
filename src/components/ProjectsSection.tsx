@@ -36,12 +36,24 @@ const ProjectsSection = () => {
                 <p className="text-sm text-muted-foreground">{project.subtitle} • {project.year}</p>
               </div>
               <p className="text-muted-foreground leading-relaxed mb-4">{project.description}</p>
-              <div className="flex flex-wrap gap-2">
-                {project.tech.map((t) => (
-                  <span key={t} className="px-3 py-1 rounded-full bg-muted text-xs font-medium">
-                    {t}
-                  </span>
-                ))}
+              <div className="flex items-center justify-between">
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((t) => (
+                    <span key={t} className="px-3 py-1 rounded-full bg-muted text-xs font-medium">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+                {"github" in project && (project as any).github && (
+                  <a
+                    href={(project as any).github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                  >
+                    GitHub <ExternalLink className="h-3.5 w-3.5" />
+                  </a>
+                )}
               </div>
             </div>
           </div>
