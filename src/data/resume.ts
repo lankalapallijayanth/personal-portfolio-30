@@ -81,8 +81,8 @@ export const resume = {
       subtitle: "AI Gaming Assistant",
       year: "2026",
       description:
-        "Developed using React.js, OpenAI API, and Supabase. GG Assistant is an AI gaming assistant that provides users with game strategies, tips, and tricks for popular games. Users can ask the assistant questions about game mechanics, character builds, and general gameplay advice. The application uses the OpenAI API to generate responses and Supabase to store user data and interaction history.",
-      tech: ["Python", "Selenium", "VSCode"],
+        "Developed using React.js, Google Gemini API, and Supabase. GG Assistant is an AI gaming assistant that provides users with game strategies, tips, and tricks for popular games. Users can ask the assistant questions about game mechanics, character builds, and general gameplay advice. The application uses the Google Gemini API to generate responses and Supabase to store user data and interaction history.",
+      tech: ["Python", "Selenium", "VSCode", "Gemini API", "Supabase", "React.js", "Figma"],
       github: "https://github.com/lankalapallijayanth/gg_assistant",
     },
     {
