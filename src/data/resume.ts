@@ -66,6 +66,37 @@ export const resume = {
 
   projects: [
     {
+      id: "whatsPoppin",
+      title: "What's Poppin",
+      subtitle: "Social Event Web Application",
+      year: "2026",
+      description:
+        "Individually developed using React.js, Supabase, and MapBox to help users find local events and activities. Users can create an account, create events, and view events created by other users. The application uses MapBox to display event locations on a map and Supabase to store user and event data.",
+      tech: ["React.js", "Supabase", "MapBox", "VSCode", "GitHub", "Figma", "SQL"],
+      github: "",
+    },
+        {
+      id: "gg_assist",
+      title: "GG Assistant",
+      subtitle: "AI Gaming Assistant",
+      year: "2026",
+      description:
+        "Developed using React.js, OpenAI API, and Supabase. GG Assistant is an AI gaming assistant that provides users with game strategies, tips, and tricks for popular games. Users can ask the assistant questions about game mechanics, character builds, and general gameplay advice. The application uses the OpenAI API to generate responses and Supabase to store user data and interaction history.",
+      tech: ["Python", "Selenium", "VSCode"],
+      github: "https://github.com/lankalapallijayanth/gg_assistant",
+    },
+    {
+      id: "reviewhub",
+      title: "ReviewHub",
+      subtitle: "Review Site for seeing review on TV Shows, Movies, and Video Games",
+      year: "2026",
+      description:
+        "Created using React.js and Supabase. Allows users to read reviews on new and popular TV shows, movies, and video games. Users can write reviews, and view reviews written by other users. All submitted articles are reviewd before being posted to ensure quality content. The application uses Supabase to store user and review data.",
+      tech: ["React.js", "Supabase", "VSCode", "GitHub", "Figma", "SQL"],
+      github: "",
+      link: "https://reviewhubreviews.lovable.app/",
+    },
+    {
       id: "instabot",
       title: "InstaBot",
       subtitle: "Python Automation Program",

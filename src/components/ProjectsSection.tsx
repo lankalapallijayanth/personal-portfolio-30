@@ -2,10 +2,16 @@ import { ExternalLink } from "lucide-react";
 import { resume } from "@/data/resume";
 import mobileDev from "@/assets/mobile-dev.png";
 import heroIllustration from "@/assets/hero-illustration.png";
+import gg_assist from "@/assets/gg_assist_home.png";
+import reviewhub from "@/assets/reviewhubpage.png";
+import whatsPoppin from "@/assets/whatsPoppin.png";
 
 const projectImageMap: Record<string, string> = {
   instabot: heroIllustration,
   halfway: mobileDev,
+  gg_assist: gg_assist,
+  reviewhub: reviewhub,
+  whatsPoppin: whatsPoppin,
 };
 
 const ProjectsSection = () => {
@@ -52,6 +58,16 @@ const ProjectsSection = () => {
                     className="flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
                   >
                     GitHub <ExternalLink className="h-3.5 w-3.5" />
+                  </a>
+                )}
+                {"link" in project && (project as any).link && (
+                  <a
+                    href={(project as any).link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                  >
+                    Link <ExternalLink className="h-3.5 w-3.5" />
                   </a>
                 )}
               </div>
